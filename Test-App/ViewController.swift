@@ -8,18 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    // MARK: - Outlets -
+    
+    @IBOutlet private weak var tappedLabel: UILabel!
+    
+    
+    // MARK: - Private properties -
+    
+    private var tapCount        = 0
+    private var tabButtonPrefix = "You tapped:"
+    
+    
+    // MARK: - Life cycle -
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    // MARK: - Actions -
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func tapButtonTapped(_ sender: Any)
+    {
+        tapCount += 1
+        
+        let tabButtonSuffix = tapCount == 1 ? "time" : "times"
+        tappedLabel.text = "\(tabButtonPrefix) \(tapCount) \(tabButtonSuffix)"
     }
-
-
 }
-

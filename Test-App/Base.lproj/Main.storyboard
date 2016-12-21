@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdw-Dw-j8r">
+                                <rect key="frame" x="25" y="30" width="325" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is just a plain test app. It works as dummy project for different external usages." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBs-tQ-nvj">
+                                <rect key="frame" x="25" y="79" width="325" height="64.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6V-r3-iAj">
+                                <rect key="frame" x="25" y="203.5" width="325" height="30"/>
+                                <state key="normal" title="Tap me!"/>
+                                <connections>
+                                    <action selector="tapButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gL4-Cs-3o2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You tapped: 0 times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsv-SH-yMm">
+                                <rect key="frame" x="111" y="258.5" width="153" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Github: @tscholze" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWc-Oc-w4i">
+                                <rect key="frame" x="25" y="631" width="325" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wdw-Dw-j8r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="1PW-Yj-vJW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hWc-Oc-w4i" secondAttribute="bottom" constant="20" id="7Cb-2u-hHF"/>
+                            <constraint firstItem="hWc-Oc-w4i" firstAttribute="leading" secondItem="JBs-tQ-nvj" secondAttribute="leading" id="9L6-Qv-pgb"/>
+                            <constraint firstItem="s6V-r3-iAj" firstAttribute="top" secondItem="JBs-tQ-nvj" secondAttribute="bottom" constant="60" id="9ZV-wY-Q5l"/>
+                            <constraint firstItem="JBs-tQ-nvj" firstAttribute="leading" secondItem="wdw-Dw-j8r" secondAttribute="leading" id="9hz-Zu-6k5"/>
+                            <constraint firstAttribute="trailing" secondItem="wdw-Dw-j8r" secondAttribute="trailing" constant="25" id="CH1-Ej-Fox"/>
+                            <constraint firstItem="Bsv-SH-yMm" firstAttribute="top" secondItem="s6V-r3-iAj" secondAttribute="bottom" constant="25" id="CMq-ip-F9B"/>
+                            <constraint firstItem="hWc-Oc-w4i" firstAttribute="trailing" secondItem="JBs-tQ-nvj" secondAttribute="trailing" id="Cio-nH-I30"/>
+                            <constraint firstItem="JBs-tQ-nvj" firstAttribute="top" secondItem="wdw-Dw-j8r" secondAttribute="bottom" constant="15" id="EoF-Ww-fAc"/>
+                            <constraint firstItem="s6V-r3-iAj" firstAttribute="leading" secondItem="JBs-tQ-nvj" secondAttribute="leading" id="Pke-RA-bTf"/>
+                            <constraint firstItem="JBs-tQ-nvj" firstAttribute="trailing" secondItem="wdw-Dw-j8r" secondAttribute="trailing" id="Z96-xP-eKb"/>
+                            <constraint firstItem="Bsv-SH-yMm" firstAttribute="centerX" secondItem="s6V-r3-iAj" secondAttribute="centerX" id="Zs1-Dj-m9K"/>
+                            <constraint firstItem="s6V-r3-iAj" firstAttribute="trailing" secondItem="JBs-tQ-nvj" secondAttribute="trailing" id="rMz-uV-eWD"/>
+                            <constraint firstItem="wdw-Dw-j8r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="ydK-MB-VO7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tappedLabel" destination="Bsv-SH-yMm" id="cT4-gV-Ecm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
